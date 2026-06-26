@@ -95,7 +95,8 @@
       .hdr-scoop { filter: drop-shadow(0 16px 22px rgba(25, 22, 15, 0.2)); }
 
       /* rail card with an L-shaped corner cut-out holding the button */
-      .rail-btn-card { position: relative; isolation: isolate; }
+      .rail-btn-card { position: relative; isolation: isolate; outline: none; -webkit-tap-highlight-color: transparent; user-select: none; }
+      .rail-btn-card:focus, .rail-btn-card:active { outline: none; }
       .rail-btn-card::before {
         content: "";
         position: absolute;
@@ -103,7 +104,8 @@
         z-index: -1;
         background: var(--cbg);
         border-radius: 30px;
-        clip-path: var(--rail-clip, none);
+        clip-path: var(--rail-clip, inset(0 round 30px));
+        transform: translateZ(0);
       }
 
       #faq summary .fq-x { display: inline-block; transition: transform .25s ease; }
