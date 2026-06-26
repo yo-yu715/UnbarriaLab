@@ -48,23 +48,23 @@
       .brand-flower { transform-origin: 50% 50%; animation: brandSpin 26s linear infinite; }
       .bf-wrap { display: inline-flex; flex: none; filter: drop-shadow(0 1px 1px rgba(40,30,15,.28)); }
       @keyframes brandCoreEn {
-        0%, 43% { opacity: 1; transform: translateY(0); }
-        50%, 93% { opacity: 0; transform: translateY(-115%); }
+        0%, 58% { opacity: 1; transform: translateY(0); }
+        66%, 91% { opacity: 0; transform: translateY(-115%); }
         100% { opacity: 1; transform: translateY(0); }
       }
       @keyframes brandCoreJa {
-        0%, 43% { opacity: 0; transform: translateY(115%); }
-        50%, 93% { opacity: 1; transform: translateY(0); }
+        0%, 58% { opacity: 0; transform: translateY(115%); }
+        66%, 91% { opacity: 1; transform: translateY(0); }
         100% { opacity: 0; transform: translateY(-115%); }
       }
       @keyframes brandTailEn {
-        0%, 18% { opacity: 1; transform: translateY(0); }
-        25%, 93% { opacity: 0; transform: translateY(115%); }
+        0%, 25% { opacity: 1; transform: translateY(0); }
+        33%, 91% { opacity: 0; transform: translateY(115%); }
         100% { opacity: 1; transform: translateY(0); }
       }
       @keyframes brandTailJa {
-        0%, 18% { opacity: 0; transform: translateY(-115%); }
-        25%, 93% { opacity: 1; transform: translateY(0); }
+        0%, 25% { opacity: 0; transform: translateY(-115%); }
+        33%, 91% { opacity: 1; transform: translateY(0); }
         100% { opacity: 0; transform: translateY(115%); }
       }
       .brand-switch { position: relative; display: inline-block; flex: none; height: 1.22em; line-height: 1.22; overflow: visible; vertical-align: middle; }
@@ -77,6 +77,7 @@
       .brand-tail-ja { animation: brandTailJa 11.5s cubic-bezier(.68,0,.18,1) infinite; }
       .brand-ja { font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif; font-size: .82em; font-weight: 900; letter-spacing: 0; }
       .brand-core-ja, .brand-tail-ja { top: .08em; }
+      .brand-core-ja { left: .22em; }
 
       .marquee:hover .marquee-track { animation-play-state: paused; }
 
