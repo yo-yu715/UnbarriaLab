@@ -47,6 +47,18 @@
       .gc-dots span.is-active { width: 24px; background: #fbe2a0; }
       .brand-flower { transform-origin: 50% 50%; animation: brandSpin 26s linear infinite; }
       .bf-wrap { display: inline-flex; flex: none; filter: drop-shadow(0 1px 1px rgba(40,30,15,.28)); }
+      @keyframes brandNameSlide {
+        0%, 18% { transform: translateY(0); }
+        25%, 43% { transform: translateY(-20%); }
+        50%, 68% { transform: translateY(-40%); }
+        75%, 93% { transform: translateY(-60%); }
+        100% { transform: translateY(-80%); }
+      }
+      .brand-switch { position: relative; display: inline-block; flex: none; height: 1.22em; line-height: 1.22; overflow: hidden; vertical-align: middle; }
+      .brand-switch-core { width: 5.65em; }
+      .brand-switch-tail { width: 2.15em; }
+      .brand-switch-track { display: flex; flex-direction: column; animation: brandNameSlide 11.5s cubic-bezier(.68,0,.18,1) infinite; }
+      .brand-switch-track > span { flex: 0 0 1.22em; height: 1.22em; line-height: 1.22; white-space: nowrap; }
 
       .marquee:hover .marquee-track { animation-play-state: paused; }
 
@@ -79,7 +91,7 @@
       #faq details { transition: background .2s ease; }
 
       @media (prefers-reduced-motion: reduce) {
-        .marquee-track, .brand-flower, [style*="uFloat"], [style*="uBob"] { animation: none !important; }
+        .marquee-track, .brand-flower, .brand-switch-track, [style*="uFloat"], [style*="uBob"] { animation: none !important; }
         html { scroll-behavior: auto; }
       }
 
@@ -118,7 +130,7 @@
       <section style="position:relative; width:min(1320px, calc(100% - 40px)); margin:0 auto; padding-top:108px;">
         <header class="hdr" style="position:fixed; z-index:50; top:14px; left:0; right:0;">
           <div class="hdr-band" style="width:min(1320px, calc(100% - 40px)); margin:0 auto; display:flex; align-items:center; justify-content:flex-start; gap:16px; background:rgba(251,248,241,.82); -webkit-backdrop-filter:blur(18px); backdrop-filter:blur(18px); border:1px solid rgba(255,255,255,.6); border-radius:28px; padding:11px 14px 11px 22px; box-shadow:0 20px 50px -26px rgba(25,22,15,.5);">
-          <a href="#top" style="flex:none; text-decoration:none; color:#50493F; display:flex; align-items:center; gap:9px; font:800 23px 'Hanken Grotesk',sans-serif; letter-spacing:-.02em;"><span style="display:inline-grid; place-items:center; width:30px; height:30px; border-radius:50%; box-shadow:inset 0 2px 4px rgba(0,0,0,.4); background:#6b6254; color:#fbf8f1; font-size:15px;">U</span><span style="white-space:nowrap;">Unbarria<sup style="font-size:.58em; vertical-align:super; line-height:0; font-weight:700;">®</sup></span><span class="bf-wrap"><svg class="brand-flower" width="0.78em" height="0.78em" viewBox="2.6 2.6 18.8 18.8" style="flex:none;" aria-hidden="true"><g fill="#c2502a"><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(45 12 12)"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(90 12 12)"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(135 12 12)"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(180 12 12)"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(225 12 12)"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(270 12 12)"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(315 12 12)"/></g></svg></span>Lab</a>
+          <a href="#top" aria-label="Unbarria Lab" style="flex:none; text-decoration:none; color:#50493F; display:flex; align-items:center; gap:7px; font:800 23px 'Hanken Grotesk','Zen Kaku Gothic New',sans-serif; letter-spacing:0;"><span style="display:inline-grid; place-items:center; width:30px; height:30px; border-radius:50%; box-shadow:inset 0 2px 4px rgba(0,0,0,.4); background:#6b6254; color:#fbf8f1; font-size:15px;">U</span><span class="brand-switch brand-switch-core" aria-hidden="true"><span class="brand-switch-track"><span>Unbarria</span><span>Unbarria</span><span>アンバリア</span><span>アンバリア</span><span>Unbarria</span></span></span><span class="bf-wrap"><svg class="brand-flower" width="0.78em" height="0.78em" viewBox="2.6 2.6 18.8 18.8" style="flex:none;" aria-hidden="true"><g fill="#c2502a"><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(45 12 12)"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(90 12 12)"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(135 12 12)"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(180 12 12)"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(225 12 12)"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(270 12 12)"/><path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(315 12 12)"/></g></svg></span><span class="brand-switch brand-switch-tail" aria-hidden="true"><span class="brand-switch-track"><span>Lab</span><span>ラボ</span><span>ラボ</span><span>Lab</span><span>Lab</span></span></span></a>
           <span class="loc-tag" style="flex:none; display:inline-flex; align-items:center; gap:4px; margin-left:9px; padding-left:11px; border-left:1px solid rgba(25,22,15,.18); font:600 12px 'Hanken Grotesk',sans-serif; letter-spacing:.01em; color:#9a8b72;"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:1px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.6"/></svg>in 福島</span>
           <nav class="nav-pill" style="margin-left:auto; display:flex; align-items:center; gap:2px; font:600 15px 'Hanken Grotesk',sans-serif; color:#2b2419;">
             <a class="nav-link" href="#program" style="text-decoration:none; color:inherit; padding:9px 15px; border-radius:999px; transition:background .18s;">Program</a>
