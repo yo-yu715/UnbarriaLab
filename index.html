@@ -138,7 +138,7 @@
       @media (max-width: 560px) {
         .hdr { filter: drop-shadow(0 16px 22px rgba(25, 22, 15, 0.2)) !important; }
         .hdr-band { gap: 10px !important; padding: 10px 14px 10px 18px !important; box-shadow: none !important; }
-        .hdr-scoop { filter: none !important; }
+        .hdr-scoop { filter: drop-shadow(0 16px 22px rgba(25, 22, 15, 0.2)) !important; }
         .hdr-band > a { font-size: 18px !important; }
         .loc-tag { font-size: 11px !important; }
         .hero-cta-row { justify-content: center !important; gap: 12px !important; flex-wrap: nowrap !important; }
@@ -632,11 +632,6 @@
         var band = hdr && hdr.querySelector('.hdr-band');
         if (!hdr || !band) return;
         function apply() {
-          if (window.matchMedia && window.matchMedia('(max-width: 560px)').matches) {
-            band.style.clipPath = 'none';
-            hdr.classList.remove('hdr-scoop');
-            return;
-          }
           var loc = band.querySelector('.loc-tag');
           var nav = band.querySelector('.nav-pill');
           var logo = band.querySelector('a');
@@ -656,7 +651,8 @@
             xL = (logo.getBoundingClientRect().right - br.left) + 16;
             xR = (loc.getBoundingClientRect().left - br.left) - 16;
           }
-          if (xR - xL < 46) {
+          var minScoopWidth = window.matchMedia && window.matchMedia('(max-width: 560px)').matches ? 24 : 46;
+          if (xR - xL < minScoopWidth) {
             band.style.clipPath = 'none';
             hdr.classList.remove('hdr-scoop');
             return;
