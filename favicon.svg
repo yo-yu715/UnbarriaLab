@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Unbarria Lab">
+  <rect width="64" height="64" rx="14" fill="#F3EEE4"/>
+  <path d="M25 12h14M28 12v15L17.5 45.2A5 5 0 0 0 21.8 53h20.4a5 5 0 0 0 4.3-7.8L36 27V12" fill="none" stroke="#C2502A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22.5 43h19l3 5.2a2 2 0 0 1-1.7 3H21.2a2 2 0 0 1-1.7-3Z" fill="#E5B84A"/>
+  <circle cx="29" cy="39" r="2.5" fill="#C2502A"/>
+  <circle cx="37" cy="34" r="2" fill="#E5B84A"/>
+</svg>
