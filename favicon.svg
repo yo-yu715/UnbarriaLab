@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Unbarria Lab">
-  <rect width="64" height="64" rx="14" fill="#F3EEE4"/>
-  <path d="M25 12h14M28 12v15L17.5 45.2A5 5 0 0 0 21.8 53h20.4a5 5 0 0 0 4.3-7.8L36 27V12" fill="none" stroke="#C2502A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M22.5 43h19l3 5.2a2 2 0 0 1-1.7 3H21.2a2 2 0 0 1-1.7-3Z" fill="#E5B84A"/>
-  <circle cx="29" cy="39" r="2.5" fill="#C2502A"/>
-  <circle cx="37" cy="34" r="2" fill="#E5B84A"/>
+  <defs>
+    <radialGradient id="paper" cx="35%" cy="28%" r="82%"><stop offset="0" stop-color="#FFFDF8"/><stop offset="1" stop-color="#E9DFCF"/></radialGradient>
+    <linearGradient id="petal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E47B4E"/><stop offset="1" stop-color="#B63D24"/></linearGradient>
+    <filter id="lift" x="-35%" y="-35%" width="170%" height="170%"><feDropShadow dx="0" dy="2" stdDeviation="1.8" flood-color="#493526" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#paper)"/>
+  <circle cx="32" cy="32" r="24" fill="#2F302D"/>
+  <g transform="translate(32 32) scale(1.72) translate(-12 -12)" fill="url(#petal)" filter="url(#lift)">
+    <path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z"/>
+    <path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(45 12 12)"/>
+    <path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(90 12 12)"/>
+    <path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(135 12 12)"/>
+    <path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(180 12 12)"/>
+    <path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(225 12 12)"/>
+    <path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(270 12 12)"/>
+    <path d="M10.5 3.7C11 2.7 13 2.7 13.5 3.7 16.3 6.2 16.3 9.3 12 12.6 7.7 9.3 7.7 6.2 10.5 3.7Z" transform="rotate(315 12 12)"/>
+  </g>
+  <circle cx="32" cy="32" r="5" fill="#FBE2A0"/>
 </svg>
